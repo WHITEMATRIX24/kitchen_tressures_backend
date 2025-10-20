@@ -309,7 +309,7 @@ def get_day_summary(so_name, week, day):
             "VISIT_ORDER", "Outlet_Erp_Id", "Outlet_Name", "Latitude", "Longitude"
         ]].sort_values(by="VISIT_ORDER").to_dict(orient="records")
 
-        map_url = f"http://127.0.0.1:8000/maps/{os.path.basename(map_file)}" if map_file and os.path.exists(map_file) else None
+        map_url = f"http://13.60.105.81:8000/maps/{os.path.basename(map_file)}" if map_file and os.path.exists(map_file) else None
 
         return {
             "status": "success",
