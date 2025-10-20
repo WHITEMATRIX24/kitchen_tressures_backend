@@ -268,8 +268,8 @@ def process_route(input_path, format_path, so_name, so_erp, week, day):
         output_file = os.path.join(OUTPUT_DIR, f"generated_route_{so_name.replace(' ', '_')}.xlsx")
         clean_df.to_excel(output_file, index=False)
 
-        excel_url = f"http://127.0.0.1:8000/output/{os.path.basename(output_file)}" if os.path.exists(output_file) else None
-        map_url = f"http://127.0.0.1:8000/maps/{os.path.basename(map_file)}" if map_file and os.path.exists(map_file) else None
+        excel_url = f"http://13.60.105.81:8000/output/{os.path.basename(output_file)}" if os.path.exists(output_file) else None
+        map_url = f"http://13.60.105.81:8000/maps/{os.path.basename(map_file)}" if map_file and os.path.exists(map_file) else None
 
         return {
             "status": "success",
